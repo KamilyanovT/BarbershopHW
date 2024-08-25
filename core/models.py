@@ -35,25 +35,10 @@ class Service(models.Model):
 
 
 class Visit(models.Model):
-    STATUS_CHOICES = [
-        (0, "Не подтверждена"),
-        (1, "Подтверждена"),
-        (2, "Отменена"),
-        (3, "Выполнена"),
-    ]
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=20)
+    master = models.ForeignKey(Master, on_delete=models.CASCADE)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
 
-    name = models.CharField(max_length=200, verbose_name="Имя")
-    phone = models.CharField(max_length=200, verbose_name="Телефон клиента")
-    master = models.ForeignKey(
-        "Master", on_delete=models.CASCADE, verbose_name="Выпадающий список мастеров"
-    )
-    services = models.ForeignKey(
-        "Service",
-        on_delete=models.CASCADE,
-        verbose_name="выпадающий список услуг, которые предоставляет выбранный мастер",
-    )
-    comment = models.TextField(verbose_name="Комментарий")
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
-    status = models.IntegerField(
-        choices=STATUS_CHOICES, default=0, verbose_name="Статус"
-    )
+    def str(self):
+        return f"Запись {self.name} с мастером {self.master}"

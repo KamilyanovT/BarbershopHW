@@ -3,10 +3,10 @@ from .models import Visit, Master, Service
 
 
 @admin.register(Visit)
-class VisitAdmin(admin.ModelAdmin):
-    list_display = ("name", "phone", "created_at", "status")
-    list_filter = ("status", "created_at")
-    search_fields = ("name", "phone", "comment")
+class AppointmentAdmin(admin.ModelAdmin):
+    list_display = ("name", "master", "service")
+    list_filter = ("name", "service")
+    search_fields = ("name", "service")
 
 
 @admin.register(Master)

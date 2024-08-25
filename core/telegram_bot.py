@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import asyncio
 
 
-# Настройка логирования
 logging.basicConfig(level=logging.DEBUG)
 
 
@@ -19,7 +18,6 @@ async def send_telegram_message(token, chat_id, message, parse_mode="Markdown"):
         raise
 
 
-# Тестируем отправку прямо тут
 if __name__ == "__main__":
     load_dotenv()
     TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")

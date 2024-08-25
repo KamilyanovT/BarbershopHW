@@ -1,17 +1,17 @@
 from django.shortcuts import render, redirect
-from .forms import VisitModelForm
+from .forms import AppointmentForm
 from .models import Service, Master
 import asyncio
 
 
 def mainPageView(request):
     if request.method == "POST":
-        form = VisitModelForm(request.POST)
+        form = AppointmentForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect("thanks")
     else:
-        form = VisitModelForm()
+        form = AppointmentForm()
 
     masters = Master.objects.all()
 
