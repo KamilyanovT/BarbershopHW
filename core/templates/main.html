@@ -1,0 +1,103 @@
+{% extends "base.html" %} 
+{% block header %}
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Барбершоп "Три брата"</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#masters">Мастера</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Услуги</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#orderForm">Запись на стрижку</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+  <div class="row">
+
+    <section class="col-12 mb-4">
+      <h2>О нас</h2>
+      <p>
+        Добро пожаловать в барбершоп "Три брата" — место, где стиль встречается с индивидуальностью, а качество с уютом. Мы не просто подстригаем волосы, мы создаем образы, которые подчеркивают вашу уникальность. Наши мастера увлечены своим делом и готовы предложить вам не только профессиональную стрижку, но и увлекательную беседу за чашечкой ароматного кофе. В "Арбузе" каждый клиент чувствует себя важным гостем!
+      </p>
+    </section>
+
+    <section id="masters" class="col-12 mb-4">
+      <h2>Наши мастера</h2>
+      <p>
+        В барбершопе "Три брата" работают настоящие художники парикмахерского искусства. Сочетая опыт, творческий подход и стремление к совершенству, наши мастера воплощают в жизнь любые идеи. От классических стрижек до смелых экспериментов — они готовы удовлетворить запросы самых требовательных клиентов. Каждый мастер обладает своим стилем и подходом, что делает наш барбершоп местом, где каждый найдет своего идеального мастера.
+      </p>
+      <div id="mastersCarouselIndicators" class="carousel slide mx-auto" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          {% for master in masters %}
+            <button type="button" data-bs-target="#mastersCarouselIndicators" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="true" aria-label="Slide {{ forloop.counter }}"></button>
+          {% endfor %}
+        </div>
+        <div class="carousel-inner">
+          {% for master in masters %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              <img src="{{ master.photo.url }}" class="d-block w-100" alt="{{ master.first_name }} {{ master.last_name }}">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>{{ master.first_name }} {{ master.last_name }}</h5>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mastersCarouselIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mastersCarouselIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="services" class="col-12 mb-4">
+      <h2>Услуги</h2>
+      <p>
+        В барбершопе "Три брата" мы предлагаем широкий спектр услуг: от стильных и аккуратных стрижек до роскошных процедур по уходу за бородой и классическому бритью. Мы любим, чтобы каждый волосок был на своем месте, поэтому предлагаем вам насладиться сервисом высочайшего качества. Подарите себе удовольствие от царского бритья с горячими полотенцами и освежающим бальзамом, или закажите стрижку, которая подчеркнет вашу индивидуальность. В "Арбузе" мы гарантируем, что вы уйдете от нас не только с отличной стрижкой, но и с отличным настроением!
+      </p>
+    </section>
+
+    <section id="reviews" class="col-12 mb-4">
+      <h2>Отзывы</h2>
+      <p>
+        Наша работа говорит за нас, но отзывы наших клиентов говорят еще лучше. Ребята с района, деловые мужчины и стильные джентльмены — все заходят в "Арбуз" и выходят счастливыми и довольными. Нас хвалят за профессионализм, душевный прием и уникальную атмосферу, которую так сложно найти в современном мире. Присоединяйтесь к нашим постоянным клиентам, и, возможно, следующий отзыв напишете именно вы!
+      </p>
+    </section>
+
+    <section id="orderForm" class="col-12 mb-4">
+      <h2>Запись на стрижку</h2>
+      <p>
+        Хотите выглядеть как миллионы долларов? Не откладывайте возможность проявить себя — запишитесь на стрижку прямо сейчас! Наши мастера ждут вас, чтобы создать образ, который заставит вас сиять. Заполните форму, выберите удобное для вас время и приходите — остальное мы возьмем на себя!
+      </p>
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="mb-3">{{ form.as_p }}</div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+      </form>
+    </section>
+
+  </div>
+</div>
+{% endblock %}
