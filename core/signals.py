@@ -14,6 +14,8 @@ def send_telegram_notification(sender, instance, created, **kwargs):
 
 *Имя:* {instance.name} 
 *Телефон:* {instance.phone or 'не указан'} 
+*Мастер:* {instance.master}
+*Услуги:* {instance.service}
 -------------------------------------------------------------
 """
         asyncio.run(
