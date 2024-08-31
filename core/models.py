@@ -38,7 +38,7 @@ class Visit(models.Model):
     name = models.CharField(max_length=255)
     phone = models.CharField(max_length=20)
     master = models.ForeignKey(Master, on_delete=models.CASCADE)
-    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+    services = models.ForeignKey(Service, on_delete=models.CASCADE)
 
     def str(self):
         return f"Запись {self.name} с мастером {self.master}"
