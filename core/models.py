@@ -9,7 +9,9 @@ class Master(models.Model):
     contact_info = models.TextField(verbose_name="Контактная информация")
     phone = models.CharField(max_length=20, verbose_name="Телефон")
     photo = models.ImageField(verbose_name="Фотография мастера")
-    services = models.ManyToManyField("Service", related_name="masters")
+    services = models.ManyToManyField(
+        "Service", related_name="masters", verbose_name="Услуги"
+    )
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

@@ -44,7 +44,7 @@ class AppointmentForm(forms.ModelForm):
     def clean(self):
         cleaned_data = super().clean()
         master = cleaned_data.get("master")
-        service = cleaned_data.get("service")
+        service = cleaned_data.get("services")
 
         if master and service:
             if not master.services.filter(id=service.id).exists():
