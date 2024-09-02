@@ -1,0 +1,34 @@
+
+
+div.card:hover {
+    transform: scale(1.01);
+    transition: transform 1.5s;
+    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+input:focus, textarea:focus, select:focus {
+    outline: none !important; 
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25) !important;
+    border-color: #6c757d !important; 
+}
+
+
+
+input[type="checkbox"] {
+    accent-color: #343a40;
+    border: 1px solid #6c757d; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: #343a40; 
+    border-color: #495057; 
+    outline: none; 
+}
+
+input[type="checkbox"]:focus {
+    outline: none; 
+    box-shadow: none; 
+    border-color: #495057; 
+}
