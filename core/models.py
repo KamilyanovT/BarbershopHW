@@ -37,10 +37,12 @@ class Service(models.Model):
 
 
 class Visit(models.Model):
-    name = models.CharField(max_length=255)
-    phone = models.CharField(max_length=20)
-    master = models.ForeignKey(Master, on_delete=models.CASCADE)
-    services = models.ForeignKey(Service, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255, verbose_name="Имя")
+    phone = models.CharField(max_length=20, verbose_name="Телефон")
+    master = models.ForeignKey(Master, on_delete=models.CASCADE, verbose_name="Мастер")
+    services = models.ForeignKey(
+        Service, on_delete=models.CASCADE, verbose_name="Услуги"
+    )
 
     def str(self):
         return f"Запись {self.name} с мастером {self.master}"

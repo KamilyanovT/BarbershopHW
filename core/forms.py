@@ -1,5 +1,4 @@
 from django import forms
-from django.forms import widgets
 from .models import Visit, Master, Service
 import re
 
@@ -44,12 +43,28 @@ class AppointmentForm(forms.ModelForm):
     def clean(self):
         cleaned_data = super().clean()
         master = cleaned_data.get("master")
-        service = cleaned_data.get("services")
+        selected_services = cleaned_data.get("services")
 
-        if master and service:
-            if not master.services.filter(id=service.id).exists():
-                raise forms.ValidationError(
-                    f"Мастер {master} не предоставляет услугу {service}."
+        if master and selected_services:
+
+            master_services = set(
+                master.services.values_list("name", flat=True).distinct()
+            )
+
+            selected_services_set = set(service.name for service in selected_services)
+
+            master_services = {service.lower() for service in master_services}
+            selected_services_set = {
+                service.lower() for service in selected_services_set
+            }
+
+            if not selected_services_set.issubset(master_services):
+
+                unsupported_services = selected_services_set - master_services
+                unsupported_services_str = ", ".join(unsupported_services)
+                self.add_error(
+                    "services",
+                    f"Мастер {master.first_name} {master.last_name} не предоставляет следующие услуги: {unsupported_services_str}.",
                 )
 
         return cleaned_data
