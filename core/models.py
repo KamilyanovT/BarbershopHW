@@ -37,12 +37,17 @@ class Service(models.Model):
 
 
 class Visit(models.Model):
-    name = models.CharField(max_length=255, verbose_name="Имя")
-    phone = models.CharField(max_length=20, verbose_name="Телефон")
-    master = models.ForeignKey(Master, on_delete=models.CASCADE, verbose_name="Мастер")
-    services = models.ForeignKey(
-        Service, on_delete=models.CASCADE, verbose_name="Услуги"
-    )
 
-    def str(self):
-        return f"Запись {self.name} с мастером {self.master}"
+    name = models.CharField(max_length=100, verbose_name="Имя")
+    phone = models.CharField(max_length=20, verbose_name="Телефон")
+    master = models.ForeignKey(
+        "Master", on_delete=models.CASCADE, verbose_name="Мастер"
+    )
+    services = models.ManyToManyField("Service", related_name="visit", verbose_name="Услуги")
+
+    def __str__(self):
+        return f"{self.name} - {self.phone}"
+
+    class Meta:
+        verbose_name = "Запись"
+        verbose_name_plural = "Записи"
