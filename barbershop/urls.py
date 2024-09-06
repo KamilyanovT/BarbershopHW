@@ -17,19 +17,31 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from core.views import main_page_view, thanks, get_services_by_master
+from core.views import (
+    MainView,
+    ThanksTemplateView,
+    ServicesByMasterView,
+    VisitCreateView,
+    VisitDetailView,
+    VisitUpdateView,
+    VisitDeleteView,
+)
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", main_page_view),
-    path("thanks/", thanks, name="thanks"),
+    path("", MainView.as_view(), name="main"),
+    path("thanks/", ThanksTemplateView.as_view(), name="thanks"),
     path(
         "get_services_by_master/<int:master_id>/",
-        get_services_by_master,
+        ServicesByMasterView.as_view(),
         name="get_services_by_master",
     ),
+    path("visit/add/", VisitCreateView.as_view(), name="create_view"),
+    path("visit/<int:pk>/view/", VisitDetailView.as_view(), name="detial_view"),
+    path("visit/<int:pk>/edit/", VisitUpdateView.as_view(), name="edit_view"),
+    path("visit/<int:pk>/delete/", VisitDeleteView.as_view(), name="delete_view"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -44,7 +44,7 @@ class Visit(models.Model):
         "Master", on_delete=models.CASCADE, verbose_name="Мастер"
     )
     services = models.ManyToManyField("Service", related_name="visit", verbose_name="Услуги")
-
+    
     def __str__(self):
         return f"{self.name} - {self.phone}"
 

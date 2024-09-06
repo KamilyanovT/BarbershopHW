@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Детали заявки{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="mb-4">Детали заявки</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"><strong>Дата создания:</strong> {{ visit.created_at }}</p>
+                    <p class="card-text"><strong>Имя:</strong> {{ visit.name }}</p>
+                    <p class="card-text"><strong>Телефон:</strong> {{ visit.phone }}</p>
+                    <p class="card-text"><strong>Статус:</strong> {{ visit.get_status_display }}</p>
+                    <p class="card-text"><strong>Мастер:</strong> {{ visit.master.first_name }} {{ visit.master.last_name }}</p>
+                    <p class="card-text">
+                    {% if visit.master.photo %}
+                        <img src="{{ visit.master.photo.url }}" alt="{{ visit.master.first_name }} {{ visit.master.last_name }}" class="img-fluid mb-3">
+                    {% endif %}
+                    </p>
+                   
+                    <p class="card-text my-3"><strong>Услуги:</strong></p>
+                    <ul>
+                        {% for service in visit.services.all %}
+                            <li>{{ service.name }}</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{% url 'detial_view' visit.pk %}" class="btn btn-danger my-2">Удалить</a>
+                    <a href="{% url 'edit_view' visit.pk %}" class="btn btn-dark my-2">Редактировать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
