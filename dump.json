@@ -1,0 +1,678 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-09-06T12:10:52.000Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Борода",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-09-06T12:11:14.846Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Стрижка",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-09-06T12:11:17.261Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Анзор Чумаев",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-09-06T12:11:41.697Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Окрашивание волос",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-09-06T12:11:43.334Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Русик Шахедов",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-09-29T09:25:44.921Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Русик Шахедов",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f \\u043c\\u0430\\u0441\\u0442\\u0435\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-09-29T09:25:54.429Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Анзор Чумаев",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f \\u043c\\u0430\\u0441\\u0442\\u0435\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Услуга",
+    "content_type": 7,
+    "codename": "add_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Услуга",
+    "content_type": 7,
+    "codename": "change_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Услуга",
+    "content_type": 7,
+    "codename": "delete_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Услуга",
+    "content_type": 7,
+    "codename": "view_service"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Мастер",
+    "content_type": 8,
+    "codename": "add_master"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Мастер",
+    "content_type": 8,
+    "codename": "change_master"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Мастер",
+    "content_type": 8,
+    "codename": "delete_master"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Мастер",
+    "content_type": 8,
+    "codename": "view_master"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Запись",
+    "content_type": 9,
+    "codename": "add_visit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Запись",
+    "content_type": 9,
+    "codename": "change_visit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Запись",
+    "content_type": 9,
+    "codename": "delete_visit"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Запись",
+    "content_type": 9,
+    "codename": "view_visit"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$mKEbfHOdYCaHMW8qq4JjYM$d8juoPWjjZKVDXm5LM/yuw+800u4TzQJsKg+8wfj5F4=",
+    "last_login": "2024-09-29T09:25:29.891Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "ad@ad.ri",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-09-06T12:10:09.002Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "core",
+    "model": "service"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "core",
+    "model": "master"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "core",
+    "model": "visit"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m2bomg18x9hhbukc9tszo41k6hudx2mf",
+  "fields": {
+    "session_data": ".eJxVjL0OAiEQhN-F2hD2-FmwtPcZyAIbOTVcctxVxndXkiu0mWK-b-YlIu1bjXvnNc5FnAWI02-XKD-4DVDu1G6LzEvb1jnJociDdnldCj8vh_t3UKnXsQ7Z6OBUQXbeoiELqEFPiPBNEzwETB40syerDDulEDy4nIuBKQXx_gCdTzX7:1smXnN:rhb1DDAkiPUYYQnzQlbn3Eoc6kt6xf66uA1HWHVo2uA",
+    "expire_date": "2024-09-20T12:10:33.188Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zoxe158einr8p6ibd27pnoajyclwqno6",
+  "fields": {
+    "session_data": ".eJxVjL0OAiEQhN-F2hD2-FmwtPcZyAIbOTVcctxVxndXkiu0mWK-b-YlIu1bjXvnNc5FnAWI02-XKD-4DVDu1G6LzEvb1jnJociDdnldCj8vh_t3UKnXsQ7Z6OBUQXbeoiELqEFPiPBNEzwETB40syerDDulEDy4nIuBKQXx_gCdTzX7:1suqBF:2GIHCz99CURLQSRfny0m_COKntK23Tr2o7rYcf4aUB4",
+    "expire_date": "2024-10-13T09:25:29.896Z"
+  }
+},
+{
+  "model": "core.master",
+  "pk": 1,
+  "fields": {
+    "first_name": "Анзор",
+    "last_name": "Чумаев",
+    "contact_info": "dfdf",
+    "phone": "89604512054",
+    "photo": "Анзор.webp",
+    "services": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "core.master",
+  "pk": 2,
+  "fields": {
+    "first_name": "Русик",
+    "last_name": "Шахедов",
+    "contact_info": "авава",
+    "phone": "89604512054",
+    "photo": "Гарфилд.jpg",
+    "services": [
+      3
+    ]
+  }
+},
+{
+  "model": "core.service",
+  "pk": 1,
+  "fields": {
+    "name": "Борода",
+    "description": "Борода",
+    "price": "700.00"
+  }
+},
+{
+  "model": "core.service",
+  "pk": 2,
+  "fields": {
+    "name": "Стрижка",
+    "description": "Стрижка",
+    "price": "1000.00"
+  }
+},
+{
+  "model": "core.service",
+  "pk": 3,
+  "fields": {
+    "name": "Окрашивание волос",
+    "description": "Окрашивание волос",
+    "price": "600.00"
+  }
+},
+{
+  "model": "core.visit",
+  "pk": 2,
+  "fields": {
+    "name": "Тимур",
+    "phone": "+79600401588",
+    "master": 1,
+    "services": [
+      1
+    ]
+  }
+},
+{
+  "model": "core.visit",
+  "pk": 4,
+  "fields": {
+    "name": "Тимур",
+    "phone": "+79600401588",
+    "master": 1,
+    "services": [
+      2
+    ]
+  }
+},
+{
+  "model": "core.visit",
+  "pk": 5,
+  "fields": {
+    "name": "Тимур",
+    "phone": "+79600401588",
+    "master": 1,
+    "services": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "core.visit",
+  "pk": 6,
+  "fields": {
+    "name": "Тимур",
+    "phone": "+79600401588",
+    "master": 1,
+    "services": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "core.visit",
+  "pk": 7,
+  "fields": {
+    "name": "Тимур",
+    "phone": "+79600401588",
+    "master": 1,
+    "services": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "core.visit",
+  "pk": 8,
+  "fields": {
+    "name": "Тимур",
+    "phone": "+79600401588",
+    "master": 1,
+    "services": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "core.visit",
+  "pk": 9,
+  "fields": {
+    "name": "Тимур",
+    "phone": "+79600401588",
+    "master": 1,
+    "services": []
+  }
+},
+{
+  "model": "core.visit",
+  "pk": 10,
+  "fields": {
+    "name": "Тимур",
+    "phone": "+79600401588",
+    "master": 1,
+    "services": [
+      1,
+      2
+    ]
+  }
+}
+]

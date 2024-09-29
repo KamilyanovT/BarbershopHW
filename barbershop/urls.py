@@ -20,12 +20,7 @@ from django.urls import path
 from core.views import (
     MainView,
     ThanksTemplateView,
-    ServicesByMasterView,
-    VisitCreateView,
-    VisitDetailView,
-    VisitUpdateView,
-    VisitDeleteView,
-)
+    ServicesByMasterView,)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -38,10 +33,6 @@ urlpatterns = [
         ServicesByMasterView.as_view(),
         name="get_services_by_master",
     ),
-    path("visit/add/", VisitCreateView.as_view(), name="create_view"),
-    path("visit/<int:pk>/view/", VisitDetailView.as_view(), name="detial_view"),
-    path("visit/<int:pk>/edit/", VisitUpdateView.as_view(), name="edit_view"),
-    path("visit/<int:pk>/delete/", VisitDeleteView.as_view(), name="delete_view"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
