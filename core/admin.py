@@ -4,7 +4,7 @@ from .models import Visit, Master, Service
 
 @admin.register(Visit)
 class AppointmentAdmin(admin.ModelAdmin):
-    list_display = ("name", "master", "services")
+    list_display = ("name", "master")
     list_filter = ("name", "services")
     search_fields = ("name", "services")
 
